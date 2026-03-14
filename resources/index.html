@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevDeck</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="titlebar" id="titlebar">
+    <div class="titlebar-left">
+      <span class="app-icon">⌗</span>
+      <span class="app-title">DevDeck</span>
+    </div>
+
+    <div class="titlebar-right">
+      <button class="win-btn" id="btn-minimize" title="Minimize">-</button>
+      <button class="win-btn close" id="btn-close" title="Close">✕</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- sidebar -->
+     <aside class="sidebar">
+      <div class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="search" placeholder="search snippets......" autocomplete="off" spellcheck="false" />
+      </div>
+
+      <div class="category-filters" id="cat-filters">
+        <button class="cat-btn active" data-cat="all">All</button>
+        <button class="cat-btn" data-cat="bash">bash</button>
+        <button class="cat-btn" data-cat="js">js</button>
+        <button class="cat-btn" data-cat="git">git</button>
+        <button class="cat-btn" data-cat="sql">sql</button>
+        <button class="cat-btn" data-cat="other">other</button>
+      </div>
+
+
+      <div class="snippet-list" id="snippet-list">
+        <!-- populated by JS -->
+      </div>
+
+      <button class="add-btn" id="add-btn">+ new snippet</button>
+     </aside>
+
+     <!-- main panel -->
+    <main class="empty-state" id="main-panel">
+
+
+      <!-- empty state -->
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">{ }</div>
+        <p>Select a snippet or create a new one</p>
+      </div>
+
+
+      <!-- snippet viewer -->
+      <div class="snippet-view hidden" id="snippet-view">
+        <div class="view-header">
+          <div class="view-meta">
+            <h2 id="view-title">untitled</h2>
+            <span class="view-cat" id="view-cat">bash</span>
+          </div>
+          <div class="view-actions">
+            <button class="action-btn copy-btn" id="copy-btn" title="Copy to clipboard">
+              <span>copy</span>
+            </button>
+            <button class="action-btn run-btn" id="run-btn" title="Run as command">
+              <span>run</span>
+            </button>
+            <button class="action-btn edit-btn" id="edit-btn" title="Edit snippet">
+              <spam>edit</spam>
+            </button>
+            <buttom class="action-btn delete-btn" id="delete-btn" title="Delete">
+              <span>delete</span>
+            </buttom>
+          </div>
+        </div>
+        <div class="view-desc" id="view-desc"></div>
+        <div class="code-block" id="view-code"></div>
+      </div>
+
+      <!-- add/edit form -->
+      <div class="snippet-form hidden" id="snippet-form">
+        <h2 id="form-title">new snippet</h2>
+        <div class="form-group">
+          <label>title</label>
+          <input type="text" id="f-title" placeholder="e.g kill port 3000" spellcheck="false" />
+        </div>
+        <div class="form-group">
+          <label>description <span class="optimal">(optional)</span></label>
+          <input type="text" id="f-desc" placeholder="what does this do?" spellcheck="false" />
+        </div>
+        <div class="form-group">
+          <label>category</label>
+          <div class="cat-select" id="f-cat-select">
+            <button class="cat-opt active" data-val="bash">bash</button>
+            <buttom class="cat-opt" data-val="js">js</buttom>
+            <buttom class="cat-opt" data-val="git">git</buttom>
+            <buttom class="cat-opt" data-val="sql">sql</buttom>
+            <buttom class="cat-opt" data-val="other">other</buttom>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>snippet</label>
+          <textarea id="f-code" placeholder="paste your snippet here..." spellcheck="false" rows="10"></textarea>
+        </div>
+        <div class="form-btns">
+          <button class="btn-save" id="brt-save">save snippet</button>
+          <buttom class="btn-cancel" id="btn-cancel">cancel</buttom>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+    <!-- toast -->
+    <div class="toast" id="toast"></div>
+  
+
+  <!-- import/export bar at bottom -->
+  <div class="bottom-bar">
+    <span id="snippet-count">0 snippets</span>
+    <div class="bottom-actions">
+      <button class="bar-btn" id="import-btn">import</button>
+      <button class="bar-btn" id="export-btn">export</button>
+    </div>
+  </div>
+
+  <script src="js/neutralino.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
