@@ -10,7 +10,7 @@ Built as a sample project for **GSoC 2026 - Neutralinojs** to demonstrate deep u
 
 ## Screenshots
 
-> 
+> C:\Users\mkalge1\Desktop\trying\devdeck\resources\screenshot.png
 
 ---
 
