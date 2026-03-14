@@ -10,7 +10,7 @@ Built as a sample project for **GSoC 2026 - Neutralinojs** to demonstrate deep u
 
 ## Screenshots
 
-> ![ScreenShot](devdeck\resources\screenshot.png) 
+> ![ScreenShot]([C:\Users\mkalge1\Desktop\trying\devdeck\resources\screenshot.png](https://media.discordapp.net/attachments/1048486806582198312/1482479750667829323/image.png?ex=69b71a5b&is=69b5c8db&hm=d5ac1b7627fc754b952b50b6fa517cc115b3bed00d3e442e3d2a02b2087814a1&=&format=webp&quality=lossless&width=641&height=406)) 
 
 ---
 
