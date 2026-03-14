@@ -10,7 +10,7 @@ Built as a sample project for **GSoC 2026 - Neutralinojs** to demonstrate deep u
 
 ## Screenshots
 
-> *(add screenshot here after taking one — Win + Shift + S)*
+> 
 
 ---
 
@@ -108,9 +108,3 @@ devdeck/
 - Vanilla JavaScript (no frameworks)
 - CSS custom properties for theming
 - Fonts: JetBrains Mono + Syne (via Google Fonts)
-
----
-
-## License
-
-MIT
